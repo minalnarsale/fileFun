@@ -1,0 +1,9 @@
+steps to install mongodb :
+https://www.google.com/search?q=steps+to+install+mongodb&rlz=1C1CHBF_enIN864IN864&oq=steps+to+&aqs=chrome.1.69i57j0l7.14286j0j4&sourceid=chrome&ie=UTF-8
+
+connect to mongoDB compass and CRUD operations :
+https://zellwk.com/blog/local-mongodb/
+https://mongodb.github.io/node-mongodb-native/2.2/tutorials/connect/authenticating/ - mongoDB authentication, mongoDB SLL certificate authentication
+
+to create multiple mongoDB instances :
+https://medium.com/@akshay2gud/creating-multiple-instances-of-mongodb-on-server-and-setting-replication-of-database-5ead59e1e4d4
