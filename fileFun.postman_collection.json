@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "8b7d2e6e-62f1-4e1d-b485-3b4f49b4fc54",
+		"name": "fileFun",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/readFile?path=F:\\minal\\technical\\nodeProjects\\fileFun\\data\\readThisData.txt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/readFile?filePath=F:\\minal\\technical\\nodeProjects\\fileFun\\data\\readThisData.txt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"readFile"
+					],
+					"query": [
+						{
+							"key": "filePath",
+							"value": "F:\\minal\\technical\\nodeProjects\\fileFun\\data\\readThisData.txt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/fileStatistics?filePath=F:\\minal\\technical\\nodeProjects\\fileFun\\data\\findMyStatatics.txt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/fileStatistics?filePath=F:\\minal\\technical\\nodeProjects\\fileFun\\data\\findMyStatatics.txt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"fileStatistics"
+					],
+					"query": [
+						{
+							"key": "filePath",
+							"value": "F:\\minal\\technical\\nodeProjects\\fileFun\\data\\findMyStatatics.txt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/readFileLineByLine?filePath=F:\\minal\\technical\\nodeProjects\\fileFun\\data\\readMyLines.txt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/readFileLineByLine?filePath=F:\\minal\\technical\\nodeProjects\\fileFun\\data\\readMyLines.txt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"readFileLineByLine"
+					],
+					"query": [
+						{
+							"key": "filePath",
+							"value": "F:\\minal\\technical\\nodeProjects\\fileFun\\data\\readMyLines.txt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/directoryStatastics?directoryPath=F:\\minal\\technical\\nodeProjects\\fileFun\\data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/directoryStatastics?directoryPath=F:\\minal\\technical\\nodeProjects\\fileFun\\data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"directoryStatastics"
+					],
+					"query": [
+						{
+							"key": "directoryPath",
+							"value": "F:\\minal\\technical\\nodeProjects\\fileFun\\data"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/deleteFile?filePath=F:\\minal\\technical\\nodeProjects\\fileFun\\data\\readThisData.txt",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/deleteFile?filePath=F:\\minal\\technical\\nodeProjects\\fileFun\\data\\temp.txt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"deleteFile"
+					],
+					"query": [
+						{
+							"key": "filePath",
+							"value": "F:\\minal\\technical\\nodeProjects\\fileFun\\data\\temp.txt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/writeFile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filePath\" : \"F:/minal/technical/nodeProjects/fileFun/data/writeInMe.txt\",\n\t\"fileContent\" : \"tourist places in pune\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/writeFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"writeFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/updateFile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filePath\" : \"F:/minal/technical/nodeProjects/fileFun/data/updateInMe.txt\",\n\t\"updatingFileContent\" : \"tourist places in Mumbai and Nashik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/updateFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updateFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/renameFile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sourcePath\" : \"F:/minal/technical/nodeProjects/fileFun/data/updateInMe.txt\",\n\t\"renameFileWith\" : \"renamedFile.txt\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/renameFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"renameFile"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

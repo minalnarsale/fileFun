@@ -15,7 +15,7 @@ exports.readFileLineByLine = async function(req, res) {
   }
   readLine.close();
   readStreamOfFile.destroy();
-  res.send(JSON.stringify(lines));
+  res.send(lines);
 };
 
 exports.fileStat = async function(req, res) {

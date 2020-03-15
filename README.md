@@ -13,3 +13,4 @@ file related operations, assignments, problem statements (express + restAPI)
 5) rename a file
 6) read a file line by line
 7) get statastical data of a file : no.of lines, upper case character count, lower case character count, special characters count, no.of spaces, numbers
+8) get list of files present inside directory
