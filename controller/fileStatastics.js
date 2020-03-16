@@ -1,9 +1,8 @@
-var fs = require('fs');
+const fs = require('fs');
 
 exports.readFileLineByLine = async function(req, res) {
 
-  const filePath = req.query.filePath;
-  const readStreamOfFile = fs.createReadStream(req.query.filePath);
+  let readStreamOfFile = fs.createReadStream(req.query.filePath);
   let readLine = require('readline').createInterface({
     input: readStreamOfFile
   });
@@ -20,8 +19,7 @@ exports.readFileLineByLine = async function(req, res) {
 
 exports.fileStat = async function(req, res) {
 
-  const filePath = req.query.filePat
-  const readStreamOfFile = fs.createReadStream(req.query.filePath);
+  let readStreamOfFile = fs.createReadStream(req.query.filePath);
 
   let readLine = require('readline').createInterface({
     input: readStreamOfFile
@@ -38,7 +36,7 @@ exports.fileStat = async function(req, res) {
       else if (line[i]>= '0' && line[i]<= '9')
       number++;
       else if (line[i] === ' ')
-      spaces++
+      spaces++;
       else
       special++;
     }

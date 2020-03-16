@@ -2,8 +2,8 @@ var fs = require('fs');
 
 exports.readMe = function(req, res){
 
-  var filePath = req.query.filePath;
-  fs.readFile(req.query.filePath, function(err, data) {
+  let filePath = req.query.filePath;
+  fs.readFile(filePath, function(err, data) {
     if (err) throw err;
     res.send(data.toString('utf8'));
   });
@@ -31,14 +31,13 @@ exports.updateMe = function(req, res){
     let splitedfilePath = filePath.split("/");
     res.send('content updated in file ' + splitedfilePath[splitedfilePath.length - 1]);
   });
-}
+};
 
 exports.deleteMe = function(req, res){
 
-  var filePath = req.query.filePath;
-  fs.unlink(req.query.filePath, function(err, data) {
-    if (err)
-    throw err;
+  let filePath = req.query.filePath;
+  fs.unlink(filePath, function(err, data) {
+    if (err) throw err;
     res.send('File deleted : ' + filePath);
   });
 };
@@ -53,4 +52,4 @@ exports.renameMe = function(req, res){
     let splitedfilePath = toBeRenamedFile.split("/");
     res.send('File Renamed!\nfrom : ' + splitedfilePath[splitedfilePath.length - 1] + '\nto : ' + renameFileWith);
   });
-}
+};

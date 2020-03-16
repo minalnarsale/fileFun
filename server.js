@@ -1,18 +1,17 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
-var app = express();
+const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(bodyParser({keepExtensions: true, uploadDir: "uploads"}));
-app.engine('jade', require('jade').__express);
+app.use(bodyParser({keepExtensions: true}));
 
-var serverPort = 5000;
+const serverPort = 5000;
 
 //defining routes
 app.use('/', require('./routes'));
 
 //starting server
 app.listen(serverPort,() => {
-    console.log("server started on port " + serverPort);
+    console.log('server started on port ' + serverPort);
 });

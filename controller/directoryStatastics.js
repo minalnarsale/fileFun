@@ -1,10 +1,9 @@
 
-
-var fs = require('fs');
+const fs = require('fs');
 
 exports.directoryStat = function(req, res) {
 
-  const directoryPath = req.query.directoryPath;
+  let directoryPath = req.query.directoryPath;
   let fileNames = [];
   fs.readdir(directoryPath, function (err, files) {
 
